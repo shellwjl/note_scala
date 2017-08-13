@@ -121,6 +121,7 @@ the better case:
 ## Functions
 
 - defination
+
 To define a function , you specify the function's name, parameters,and body like this:
 
 ```scala
