@@ -120,4 +120,76 @@ the better case:
 ---
 ## Functions
 
+- defination
+To define a function , you specify the function's name, parameters,and body like this:
+
+```scala
+	def abs(x:Double)=if(x>=0) x else -x
+```
+
+- Default and Named Arguments
+
+The function *decorate* has two parameters,left and right, with default arguments "[" and "]"
+
+```scala
+	def decorate(str:String,left:String="[",rigtht:String="]")=
+		left +str+right
+```
+
+You can also specify the parameter names when you supply the arguments.
+
+```scala
+	decorate(left="<<<",str = "hello",right= ">>>")
+```
+
+You can mix unnamed and named arguments,privided the unnamed ones come first
+
+- Variabel Arguments
+
+to implement a function that can take a variable number of arguments.
+
+```scala
+	def sum(arg: Int*)={
+		var result = 0
+		for (arg <- args) result += arg
+		result
+	}
+```
+
+call this function with as many arguments as you like.
+
+```scala
+	val s = sum(1,4,9,16,25)
+```
+**This function receieves a single parameter of type seq**
+
+If the sum function is called with one argement. that must be a single integer,not a range of integers.
+
+```scala
+val s = sum(1 to 5:_*) // Consider 1 to 5 as an argument sequence
+```
+
+- Procedures
+
+If the function body is enclosed in braces *without a preceding=symbol*,then the return type is *Unit*. 
+
+```scala
+	def box(s:String):Unit={
+	 ...
+	}
+```
+- lazy value
+
+When a *val* is declared as *lazy*,its initialization is deferred until it is accessed for the first time.
+You can think of lazy values as halfway between *val* and *def*.
+
+```scala
+// evaluated as soon as words is defined
+val words = scala.io.Source.fromFile("/usr/words").mkString
+//evaluated the first time words is used. 
+lazy val words = scala.io.Source.fromFile("/usr/words").mkString
+//evaluated every time words is used
+def words = scala.io.Source.fromFile("/usr/words").mkString
+```
+
 
