@@ -104,7 +104,7 @@ Achieved with a *guard*:an *if* inside the *for*.
 ```
 **the result is a new collection --the original collection is not affected**
 
-Alternatively,you could write ```a.filter(_ % 2).map(2 * _)``` or even ``` a filter {_ % 2 == 0 } map {2 * _}```
+Alternatively,you could write ```a.filter(_ % 2 == 0).map(2 * _)``` or even ``` a filter {_ % 2 == 0 } map {2 * _}```
 
 - Given an array buffer of integers,we want to remove all but the first negative number.
 
