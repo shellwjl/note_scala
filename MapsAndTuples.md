@@ -45,7 +45,7 @@ val scores = new scala.collection.mutable.HashMap[String,Int]
  
  ### Updating Map Values
  
- - update or add 
+ - update or add (assuming scores is mutable)
  
  ```scala
  	scores("Bob")=10   // Updates the existing value
