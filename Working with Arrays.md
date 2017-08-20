@@ -123,7 +123,7 @@ Alternatively,you could write ```a.filter(_ % 2 == 0).map(2 * _)``` or even ``` 
 the better version:
 
 ```scala
-	var first = false
+	var first = True
 	val indexes = for (i <- 0 until a.length if first || a(i)>=0)
 		yield{
 			if (a(i)<0 )first = false; i
