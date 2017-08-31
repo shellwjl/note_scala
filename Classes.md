@@ -168,7 +168,7 @@ just two differences with Java or C++
 
 The primary constructor is interwoven with the class definition.
 
-1. The parameters of the primary constructor are placed immediately after the class name.
+* The parameters of the primary constructor are placed immediately after the class name.
 
 ```Scala
 	class Person(val name:String, val age:Int){
@@ -193,7 +193,7 @@ Half a line of Scala is the equivalent of seven lines of Java
 	}
 ```
 
-2. The primary constructor executes **all statements** in the class definition.
+* The primary constructor executes **all statements** in the class definition.
 
 ```Scala
 	class Person(val name:String,val age:Int){
@@ -255,7 +255,7 @@ Add a member within its own network,but not across networks
 ```
 if you don't want this bebavior, there are two solutions.
 
-1. move the Member type to the Network *companion object*
+* move the Member type to the Network *companion object*
 
 ```scala
 	object Network{
@@ -269,7 +269,7 @@ if you don't want this bebavior, there are two solutions.
 	}
 ```
 
-2. use *type projection* Network#Member,which means "a Member of any Network"
+* use *type projection* Network#Member,which means "a Member of any Network"
 
 ```scala
 	class Network{
